@@ -42,6 +42,7 @@ const List = mongoose.model('List', listSchema);
 app.get('/', function(req, res) {
 
     Item.find({ name: { $not: { $eq: null } } }, function(err, docs) {
+	console.log('i am inside');
         if (err)
             console.log(err);
 
